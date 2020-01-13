@@ -1,10 +1,10 @@
 import { loadEntry, loadEntryContent, appendAssets } from './handleAssets';
 
-type rootType = string | getRootElement | HTMLElement;
-
-interface getRootElement {
+interface GetRootElement {
   (): HTMLElement;
 }
+
+type rootType = string | GetRootElement | HTMLElement;
 
 // record rootElement for unmount
 let root;
